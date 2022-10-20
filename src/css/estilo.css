@@ -1,0 +1,353 @@
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../imagens/sekiro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'VT323', monospace;
+    color: #c7c6c6;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+body:before{
+    filter: brightness(50%);
+}
+
+.cartao{
+    background-color: #664134b8;
+    width: 500px;
+    border: 2px solid #e2a76d;
+    border-radius: 10px;
+    overflow: hidden;
+    animation-name: changeColor;
+    animation-duration: 3s;  
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+
+.abas img{
+    width: 30px;
+}
+
+.cartao .minhas-informacoes{
+    padding-top: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background: #664134b8;
+    padding-bottom: 10px;
+    justify-content: space-evenly;
+}
+
+.cartao .minhas-informacoes img{
+    width: 110px;
+    border-radius: 10px;
+    border: 3px solid #e2a76dcf;
+}
+
+.cartao .minhas-informacoes .nome{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cartao .minhas-informacoes .cargo{
+    font-size: 17px;
+    color: #b8bbc5;
+    text-align: center;
+}
+
+.cartao .abas{
+    display: flex;
+
+}
+
+.cartao .abas .aba{
+    width: 50%;
+    display: flex;
+    padding: 5px 0px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out 0s;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cartao .abas .aba:not(.selecionado) {
+    background-color: #664134b8;
+}
+
+.cartao .abas img{
+    width: 30px;
+    height: 32px;
+}
+
+.cartao .abas .aba.selecionado{
+    background-color: #262626 !important;
+}
+
+.cartao .informacoes-abas{
+    background-color: #262626;
+}
+
+.cartao .abas .aba:hover{
+    background-color: #7d5649b8;
+}
+
+.informacoes-abas .informacao{
+    min-height: 330px;
+    padding: 15px;
+    display: none;
+}
+
+.informacoes-abas .informacao.selecionado{
+    display: block;
+}
+
+.informacoes-abas .sub-titulo{
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.informacoes-abas .descricao{
+    font-size: 21px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Começo - aba Sobre/tecnologia*/
+
+.titulo-descricao{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.experiencia-tecnologia{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.experiencia-tecnologia img{
+    width: 50px;
+
+}
+.experiencia-tecnologia p{
+    margin-left: 10px;
+}
+
+.nivelsenioridade.baixo{
+    color: red;
+}
+
+.nivelsenioridade.medio{
+    color: rgb(233, 233, 0);
+}
+
+.nivelsenioridade.alto{
+    color: rgb(0, 255, 0);
+}
+
+.nivelsenioridade.muitoexperiente{
+    color: blue;
+}
+
+/* Fim - aba Sobre/tecnologia*/
+
+/* Começo - Aba Experiência*/
+
+.informacao .experiencia-profissional .apresentacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.informacao .experiencia-profissional .apresentacao img{
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.informacao .experiencia-profissional{
+    margin-bottom: 30px;
+}
+
+.informacao .experiencia-cargo{
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.experiencia-profissional .apresentacao h3{
+    color: #cb7658;
+}
+
+.experiencia-cargo .titulo{
+    color: #ff936c;
+}
+
+.experiencia-cargo .periodo-experiencia{
+    color: #fda98a;
+    margin-bottom: 10px;
+}
+
+/* Fim - Aba Experiência*/
+
+/*Começo - aba projetos*/
+
+.cartao .informacao .clientes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cartao .informacao .clientes img{
+    max-width: 80%;
+    border-radius: 15px;
+    border: 1px solid #e2a76dcf;
+}
+
+.cartao .projeto-entregue{
+    margin-bottom: 40px;
+}
+
+.cartao a.titulo-projeto{
+    font-size: 35px;
+    margin-bottom: 5px;
+    color: #cb7658;
+    transition: 0.8s;
+    display: block;
+}
+
+.cartao a.titulo-projeto:hover{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #ff936c;
+}
+
+.cartao .descricao-projeto{
+    font-size: 21px;
+    color: #b8bbc5;
+}
+
+/*Fim - aba projetos*/
+
+/* Começo - aba Formações*/
+
+#informacao-formacoes-feitas h3{
+    text-align: center;
+    margin-bottom: 20px;
+    /* text-transform: uppercase; */
+}
+
+#informacao-formacoes-feitas .formacao-curso{
+    margin-bottom: 20px;
+}
+
+#informacao-formacoes-feitas .formacao-curso .titulo{
+    text-transform: uppercase;
+}
+
+/* Fim - aba Formações*/
+
+/* Começo - aba rede sociais*/
+
+.cartao .redes-sociais{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.cartao .redes-sociais li a{
+    width: 250px;
+    display: block;
+    color: #f3f3f3;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.redes-sociais .curriculo{
+    background-color: #06c185;
+}
+
+.redes-sociais .linkedin{
+    background-color: #1d87bd;
+}
+
+.redes-sociais .github{
+    background-color: #545454;
+}
+
+.cartao .redes-sociais li a:hover{
+    opacity: 0.6;
+}
+
+/* Fim - aba rede sociais*/
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #d8420cb8 #070d12;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #262626;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #d8420cb8;
+    border-radius: 20px;
+    border: 3px solid #180f0cb8;
+}
+
+@keyframes changeColor {
+    from {background-color: #262626;}
+    to {background-color: #ac360bb8;}
+}
+
+.magento{
+    color: #f04a11;
+}
+
+.woocommerce{
+    color: #7f54b3;
+}
+@media only screen and (max-width: 600px) {
+    .abas label{
+        font-size: 15px;
+    }
+
+    .cartao .minhas-informacoes .nome{
+        font-size: 27px;
+    }
+
+    .informacoes-abas .descricao{
+        font-size: 17px;
+    }
+
+    .cartao a.titulo-projeto{
+        font-size: 30px;
+    }
+
+    .cartao .minhas-informacoes img{
+        width: 90px;
+    }
+
+}
