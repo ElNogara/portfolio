@@ -14,4 +14,4 @@ jobs:
           server: ${{ secrets.host }}
           username: ${{ secrets.user }}
           password: ${{ secrets.password }}
-          server-dir: testes/pastaportfolio/
+          server-dir: subdominios/portfolio/
