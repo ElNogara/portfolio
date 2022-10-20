@@ -14,4 +14,4 @@ jobs:
           server: ${{ secrets.host }}
           username: ${{ secrets.user }}
           password: ${{ secrets.password }}
-          server-dir: domains/wellingtonnogara.com/public_html/portfolio/
+          server-dir: testes/pastaportfolio/
